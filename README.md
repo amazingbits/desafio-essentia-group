@@ -93,12 +93,12 @@ A camada `views` contém os arquivos de visão do sistema. Como estou utilizando
 
 Tela Inicial
 <div align="center">
-    <img style="width: 100%" src="https://i.ibb.co/Sm88Chn/tela-inicial.jpg" alt="Tela Inicial" />
+    <img style="width: 100%" src="https://i.postimg.cc/fT58nQcW/tela-inicial.jpg" alt="Tela Inicial" />
 </div>
 
 Tela de Cadastro
 <div align="center">
-    <img style="width: 100%" src="https://i.ibb.co/MMNvyLY/tela-cadastro.jpg" alt="Tela de Cadastro" />
+    <img style="width: 100%" src="https://i.postimg.cc/SQ6ZdMjM/tela-cadastro.jpg" alt="Tela de Cadastro" />
 </div>
 
 Tela de Edição
