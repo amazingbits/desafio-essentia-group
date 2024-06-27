@@ -1,0 +1,4 @@
+.idea
+vendor
+uploads
+.phpunit.result.cache

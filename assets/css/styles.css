@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #B4A270;
+    --secondary-color: #292929;
+    --tertiary-color: #ffffff;
+    --default-shadow-config: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --default-border-radius: 15px;
+    --max-width: 800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+main {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: var(--max-width);
+    background-color: var(--tertiary-color);
+    box-shadow: var(--default-shadow-config);
+    border-radius: var(--default-border-radius);
+    padding: 2rem;
+}
+
+.logo-image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo-image img {
+    max-width: 80px;
+}
+
+.header {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.header a {
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: var(--default-border-radius);
+}
+
+.header a svg {
+    margin-right: 6px;
+}
+
+.customer-list {
+    width: 100%;
+    max-height: calc(100vh - 280px);
+    overflow: auto;
+    padding: 6px;
+}
+
+.customer {
+    box-shadow: var(--default-shadow-config);
+    padding: 8px;
+    margin-bottom: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 570px) {
+    .customer {
+        grid-template-columns: 1fr;
+    }
+
+    .customer .customer-actions {
+        text-align: right;
+    }
+}
+
+.customer .customer-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.customer .customer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.customer .customer-info span {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.customer .customer-actions a {
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+.customer .customer-actions a:last-of-type {
+    margin-right: 0;
+}
+
+input[name="customer-image"] {
+    display: none;
+}
+
+.file-input {
+    margin: 0 auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.select-customer-image {
+    display: block;
+    padding: 6px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    font-size: 0.7rem;
+    font-weight: 300;
+    white-space: nowrap;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.pre-viewer-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+
+.pre-viewer-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 8px;
+    box-shadow: var(--default-shadow-config);
+    outline: none;
+    border: 1px solid #d6d6d6;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    border-radius: var(--default-border-radius);
+}
+
+.input-group input::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 18px 10px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--default-border-radius);
+    cursor: pointer;
+}
+
+.customer-profile {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 680px) {
+    .customer-profile {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-profile .customer-image {
+        text-align: center;
+    }
+
+    .customer-profile .customer-image img {
+        max-width: 100px;
+    }
+}
+
+.customer-profile .customer-image img {
+    width: 100%;
+    max-height: 120px;
+}
+
+.customer-profile .customer-informations {
+    padding: 1rem;
+    background-color: var(--tertiary-color);
+    box-shadow: var(--default-shadow-config);
+}
+
+.customer-profile .customer-informations .customer-information {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 0.5px solid var(--primary-color);
+}
+
+.customer-profile .customer-informations .customer-information:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}

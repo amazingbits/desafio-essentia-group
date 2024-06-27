@@ -1,0 +1,54 @@
+version: "3"
+services:
+  php:
+    container_name: setup-apache
+    build: ./docker/php
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8080:80
+    restart: always
+    networks:
+      - mynetwork
+
+  mysql:
+    container_name: setup-mysql
+    image: mysql:5
+    env_file:
+      - ./.env
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    tty: true
+    volumes:
+      - setup-data:/var/lib/mysql/
+      - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - mynetwork
+    ports:
+      - '3388:3306'
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+
+  phpmyadmin:
+      container_name: setup-phpmyadmin
+      image: phpmyadmin:5.2
+      restart: always
+      ports:
+        - '8888:80'
+      networks:
+        - mynetwork
+      environment:
+        PMA_HOST: setup-mysql
+      depends_on:
+        - mysql
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  setup-data:
+    driver: local
