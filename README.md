@@ -137,9 +137,9 @@ MAX_FILE_SIZE_IN_MB=10
 <p>`DB_PASSWORD`: senha do usuário do banco de dados `Docker` ou local instalado na máquina.</p>
 <p>`MAX_FILE_SIZE_IN_MB`: limite de tamanho para o upload de imagens. Neste caso, 10mb.</p>
 
-1 - Faça o clone do repositório para a sua máquina.
-2 - Abra o terminal na raíz do projeto recém clonado.
-3 - Utilize o comando `composer update` para que sejam instaladas todas as dependências do projeto nas versões que foram concebidas.
+- 1. Faça o clone do repositório para a sua máquina.
+- 2. Abra o terminal na raíz do projeto recém clonado.
+- 3. Utilize o comando `composer update` para que sejam instaladas todas as dependências do projeto nas versões que foram concebidas.
 
 Nesta parte, os passos se dividem, dependendo da forma que você preferir testar.
 
